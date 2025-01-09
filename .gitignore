@@ -1,0 +1,5 @@
+node_modules/
+.env
+trace.zip
+playwright-report/
+.DS_Store

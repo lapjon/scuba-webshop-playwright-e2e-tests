@@ -1,0 +1,129 @@
+/* General font styling */
+body {
+    font-family: 'Comfortaa', sans-serif;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Header styles */
+header {
+    background-color: #07248b;
+    color: white;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between; /* Space between left, center, and right sections */
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+header h1 {
+    margin: 0 20px; /* Add some space on the left and right of the title */
+    flex: 0 0 auto; /* Keep title aligned but not all the way to the left */
+}
+
+header h1 a {
+    font-size: 2.3rem;
+    color: white;
+    text-decoration: none;
+}
+
+header h1 a:hover {
+    color: #e9d8a6;
+}
+
+header nav {
+    flex: 1; /* Allow navigation to take up the remaining space */
+    display: flex;
+    justify-content: center; /* Center-align the navigation links */
+    gap: 20px; /* Space between links */
+}
+
+header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+header nav li {
+    display: flex;
+    align-items: center;
+}
+
+header nav a {
+    color: white;
+    font-size: 1rem;
+    text-decoration: none;
+}
+
+header nav a:hover {
+    color: #e9d8a6;
+}
+
+/* Logged-in user indicator */
+#logged-in-user {
+    font-size: 1rem;
+    color: white;
+    font-weight: bold;
+}
+
+#logged-in-user span {
+    font-weight: bold;
+}
+
+/* Basket indicator */
+#basket-link {
+    display: flex;
+    align-items: center;
+    gap: 5px; /* Space between icon and text */
+    flex: 0 0 auto; /* Keep the cart aligned to the right */
+}
+
+#basket-icon {
+    vertical-align: middle;
+    width: 20px;
+    height: 20px;
+}
+
+#basket-counter {
+    font-weight: bold;
+    margin-left: 5px;
+    background-color: white;
+    color: #07248b;
+    border-radius: 50%;
+    padding: 5px 10px;
+    font-size: 0.9rem;
+}
+
+/* Logout link */
+#logout-link {
+    color: #e9d8a6;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+#logout-link:hover {
+    text-decoration: underline;
+}
+
+/* Responsive styles for header */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        gap: 10px; /* Space between items when stacked */
+    }
+
+    #basket-link {
+        margin-top: 10px;
+    }
+}

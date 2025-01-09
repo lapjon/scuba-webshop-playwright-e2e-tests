@@ -1,0 +1,237 @@
+/* General font styling */
+body {
+    font-family: 'Comfortaa', sans-serif; /* Set Comfortaa as the default font */
+    color: #333; /* Standard text color */
+    line-height: 1.6; /* Improve readability */
+  }
+  
+  /* Headings (h1, h2, h3) */
+  h1, h2, h3 {
+    font-weight: 700; /* Bold for headings */
+    color: #07248b; /* Matches your color scheme */
+    line-height: 1.4; /* Adjust heading line spacing */
+  }
+  
+  /* Paragraphs and general text */
+  p {
+    font-weight: 400; /* Regular weight for text */
+    color: #666; /* Subtle gray for text */
+  }
+  
+  /* Buttons */
+  button, .add-to-basket, .browse-gear-link {
+    font-family: 'Comfortaa', sans-serif;
+    font-weight: 400; /* Regular weight for buttons */
+  }
+
+  .gear-items {
+    padding-top: 100px; /* Adjust based on header height */
+}
+
+/* Container for the gear items */
+.items-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 columns */
+    gap: 20px; /* Spacing between items */
+    padding: 20px; /* Padding around the container */
+  }
+  
+  .item {
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 15px;
+    max-width: 100%; /* Ensure items fit the grid */
+    text-align: center;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .item img {
+    max-width: 100%;
+    border-radius: 10px;
+  }
+  
+  .item h3 {
+    margin: 10px 0;
+    font-size: 1.2em;
+  }
+  
+  .item p {
+    color: #666;
+  }
+  
+  /* Add to Basket button */
+  .add-to-basket {
+    margin-top: 10px;
+    padding: 10px 15px;
+    background-color: #07248b;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .add-to-basket:hover {
+    background-color: #1d3fb8;
+  }
+
+  /* General Page Background */
+body {
+    background-color: #f7f7f7; /* Light gray background for better contrast */
+    color: #333; /* Standard text color */
+    font-family: 'Comfortaa', sans-serif;
+    line-height: 1.6;
+  }
+  
+  /* Header */
+  header {
+    background-color: #07248b; /* Primary blue */
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+  }
+  
+  header a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  header a:hover {
+    color: #f58b45; /* Accent orange for hover */
+  }
+  
+  /* Headings */
+  h1, h2, h3 {
+    color: #07248b; /* Primary blue for consistency */
+  }
+  
+  /* Buttons */
+  button, .add-to-basket, .browse-gear-link {
+    background-color: #07248b; /* Primary blue */
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  button:hover, .add-to-basket:hover, .browse-gear-link:hover {
+    background-color: #f58b45; /* Accent orange for hover effect */
+    transform: scale(1.05); /* Subtle zoom effect */
+  }
+  
+  /* Gear Item Containers */
+  .item {
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border: 1px solid #ddd;
+    transition: box-shadow 0.3s ease, transform 0.2s ease;
+  }
+  
+  .item:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Slightly stronger shadow on hover */
+    transform: translateY(-5px); /* Lift effect */
+  }
+  
+  /* Prices */
+  .item p {
+    color: #f34223; /* Accent orange for price text */
+    font-weight: bold;
+  }
+  
+  /* Footer */
+  footer {
+    background-color: #07248b; /* Primary blue */
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+  }
+  
+  footer a {
+    color: #f34223; /* Accent orange */
+    text-decoration: none;
+  }
+  
+  footer a:hover {
+    color: white; /* Invert hover color */
+  }
+
+/* Mobile-First Default Styling */
+.items-container {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    gap: 16px; /* Add spacing between items */
+    align-items: center; /* Center align items horizontally */
+    padding: 16px; /* Add padding around the container */
+  }
+  
+  .item {
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: space-between;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 100%; 
+    max-width: 400px;
+    padding: 16px;
+    background-color: #fff;
+    text-align: center; 
+  } 
+  
+  .item img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 12px; /* Space below the image */
+  }
+  
+  .item h3 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 8px;
+  }
+  
+  .item p {
+    font-size: 1rem;
+    margin-bottom: 8px;
+  }
+  
+  .add-to-basket {
+    width: 100%;
+    max-width: 200px; /* Limit button width */
+    padding: 10px 16px;
+    background-color: #274fde;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  /* Larger Screen Adjustments */
+  @media (min-width: 768px) {
+    .items-container {
+      flex-direction: row; /* Display items in a row */
+      flex-wrap: wrap; /* Allow items to wrap to the next line */
+      justify-content: space-evenly; /* Evenly space items */
+    }
+  
+    .item {
+      width: calc(33.333% - 32px); /* Three items per row */
+      margin-bottom: 16px; /* Add spacing between rows */
+    }
+  }
+  
+  @media (min-width: 1200px) {
+    .item {
+      width: calc(25% - 32px); /* Four items per row for larger screens */
+    }
+  }

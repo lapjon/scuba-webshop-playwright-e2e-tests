@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basket - Deep Dive</title>
+    <link rel="stylesheet" href="/css/base.css">
+    <link rel="stylesheet" href="/css/header.css">
+    <link rel="stylesheet" href="/css/basket.css">
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="header-placeholder"></div>
+    <main>
+        <section class="basket-section">
+            <h2>Your Cart</h2>
+            <div id="basket-items">
+                <!-- Dynamically loaded items will appear here -->
+            </div>
+            <div class="basket-summary">
+                <p>Total Items: <span id="total-items">0</span></p>
+                <p>Total Price: $<span id="total-price">0.00</span></p>
+                <a href="checkout.html" class="checkout-button">Proceed to Checkout</a>
+            </div>
+        </section>
+    </main>
+    <footer>
+        Dive Shop
+    </footer>
+        <script src="/basket.js"></script>
+</body>
+</html>

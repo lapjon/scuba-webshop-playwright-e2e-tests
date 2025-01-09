@@ -1,0 +1,58 @@
+<header>
+    <h1><a href="welcome.html">Deep Dive</a></h1>
+    <nav>
+        <ul>
+            <li><a href="gear.html">Our Gear</a></li>
+            <li><a href="about.html">About</a></li>
+            <li id="login-link"><a href="login.html">Login</a></li>
+            <li id="logged-in-user" style="display: none;">
+                Logged in as <span id="user-email"></span> | <a href="#" id="logout-link">Logout</a>
+            </li>
+            <li id="basket-link">
+                <img id="basket-icon" src="/images/cart-icon.svg" alt="Basket" style="vertical-align: middle; width: 20px; height: 20px; margin-right: 5px;">
+                <a href="basket.html">Cart (<span id="basket-counter">0</span>)</a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<!--
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const basketCounter = document.getElementById('basket-counter');
+        const loginLink = document.getElementById('login-link');
+        const loggedInUser = document.getElementById('logged-in-user');
+        const userEmailElement = document.getElementById('user-email');
+        const basket = JSON.parse(localStorage.getItem('basket')) || [];
+        const userEmail = localStorage.getItem('userEmail');
+        const isLoggedIn = localStorage.getItem('isLoggedIn') === 'true';
+
+        // Debugging: Ensure script runs
+        console.log('Script loaded. Basket:', basket, 'User email:', userEmail, 'Is logged in:', isLoggedIn);
+
+        // Update basket counter
+        if (basketCounter) {
+            basketCounter.textContent = basket.length;
+        }
+
+        // Toggle visibility of Login and Logged-in User sections
+        if (isLoggedIn && userEmail) {
+            loggedInUser.style.display = 'inline';
+            userEmailElement.textContent = userEmail;
+            loginLink.style.display = 'none';
+        } else {
+            loggedInUser.style.display = 'none';
+            loginLink.style.display = 'inline';
+        }
+
+        // Add Logout functionality
+        const logoutLink = document.getElementById('logout-link');
+        if (logoutLink) {
+            logoutLink.addEventListener('click', function (event) {
+                event.preventDefault();
+                localStorage.clear(); // Clear user session
+                window.location.reload(); // Reload to update header
+            });
+        }
+    });
+</script>
+-->

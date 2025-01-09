@@ -1,0 +1,177 @@
+/* General font styling */
+body {
+    font-family: 'Comfortaa', sans-serif; /* Set Comfortaa as the default font */
+    color: #333; /* Standard text color */
+    line-height: 1.6; /* Improve readability */
+  }
+  
+  /* Headings (h1, h2, h3) */
+  h1, h2, h3 {
+    font-weight: 800; /* Bold for headings */
+    color: #07248b; /* Matches your color scheme */
+    line-height: 1.4; /* Adjust heading line spacing */
+  }
+  
+  /* Paragraphs and general text */
+  p {
+    font-weight: 600; /* Regular weight for text */
+    color: #666; /* Subtle gray for text */
+  }
+  
+  /* Buttons */
+  button, .add-to-basket, .browse-gear-link {
+    font-family: 'Comfortaa', sans-serif;
+    font-weight: 500; /* Regular weight for buttons */
+  }
+
+
+
+
+/* Base styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+h1, h2 {
+    margin: 0;
+    padding: 10px 0;
+    color: #274fde;
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+    color: #274fde;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+button {
+    background-color: #07248b;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+button:hover {
+    background-color: #274fde;
+}
+
+/* Footer */
+footer {
+    background-color: #07248b;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    font-size: 1rem;
+    z-index: 1000; /* Ensure it stays above other content */
+}
+
+main {
+    padding-top: 100px; /* Adjust based on your header height */
+    padding-bottom: 50px; /* Adjust based on footer height */
+}
+
+/* Ensure adequate spacing for headings */
+h2 {
+    margin-top: 20px;
+}
+
+/* about page */
+
+.about-section {
+   
+    margin-top: 40px; /* Optional: Add a little extra spacing for clarity */
+    max-width: 800px; /* Restrict the maximum width of the text */
+    margin: 0 auto; /* Center the section horizontally */
+    padding: 20px; /* Add padding for better spacing */
+    line-height: 1.6; /* Increase line height for readability */
+    text-align: justify; /* Optionally justify the text for a cleaner look */
+    color: #fdfdfd !important; /* Set a readable text color */
+}
+
+.about-section h2 {
+    text-align: center; /* Center-align the heading */
+    font-size: 2rem;
+    margin-bottom: 15px; /* Add space below the heading */
+    color: #07248b; /* Match the header color scheme */
+}
+
+.about-content p {
+    font-weight: 900 !important;
+   
+}
+
+.about-content {
+    text-align: center;
+    padding: 20px;
+   
+}
+
+.about-image {
+    max-width: 100%; /* Adjust the size as needed */
+    height: auto;
+    margin: 20px 0;
+    border-radius: 10px; /* Optional: adds rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: adds a subtle shadow */
+}
+
+
+/* Global background image for all pages */
+body {
+    background-image: url('/images/background3.jpg') !important; /* Replace with the path to your image */
+    background-size: cover !important; /* Ensures the image covers the entire page */
+    background-repeat: no-repeat !important; /* Prevents the image from repeating */
+    background-attachment: fixed !important; /* Keeps the image fixed while scrolling */
+    background-position: center !important; /* Centers the image on the page */
+    color: #080808; /* Ensure the text is readable against the background */
+    font-family: 'Comfortaa', sans-serif;
+}
+
+body.login-page,
+body.signup-page {
+    background: inherit !important; /* Force inheriting the background from base.css */
+}
+
+/* Other existing styles */
+main {
+    padding-top: 100px; /* Adjust based on your header height */
+}
+
+footer {
+    background-color: #07248b; /* Semi-transparent footer to blend with the background */
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    font-size: 1rem;
+}
+
+header {
+    background-color: #07248b; /* Semi-transparent header to blend with the background */
+    color: white;
+    padding: 15px;
+    text-align: center;
+    font-size: 1.5rem;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+

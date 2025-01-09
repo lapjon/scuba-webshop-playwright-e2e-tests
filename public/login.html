@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Deep Dive</title>
+    <link rel="stylesheet" href="/css/base.css">
+    <link rel="stylesheet" href="/css/header.css">
+    <link rel="stylesheet" href="/css/login.css">
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body class="login-page">
+    <div id="header-placeholder"></div>
+
+    <main>
+        <section class="login-section">
+            <h2>Login</h2>
+            <form id="login-form" noValidate>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+                <button type="submit">Login</button>
+            </form>
+            <p>Not a member? <a href="signup.html">Register here</a></p>
+            <div id="error-message" style="display: none;"></div>
+            <div id="login-message"></div>
+        </section>
+    </main>
+    <footer>
+        Dive Shop
+    </footer>
+
+    <script>
+   // Load the reusable header dynamically
+   document.addEventListener("DOMContentLoaded", function () {
+    fetch('/header.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('header-placeholder').innerHTML = data;
+
+            // Dynamically update the cart counter
+            const basketCounter = document.getElementById('basket-counter');
+            const loginLink = document.getElementById('login-link');
+            const loggedInUser = document.getElementById('logged-in-user');
+            const userEmailElement = document.getElementById('user-email');
+            const basket = JSON.parse(localStorage.getItem('basket')) || [];
+            const userEmail = localStorage.getItem('userEmail');
+            const isLoggedIn = localStorage.getItem('isLoggedIn') === 'true';
+
+            // Debugging: Log the state for testing
+            console.log('Basket:', basket);
+            console.log('isLoggedIn:', isLoggedIn);
+            console.log('userEmail:', userEmail);
+
+            if (basketCounter) {
+                basketCounter.textContent = basket.length;
+            }
+
+            if (isLoggedIn && userEmail) {
+                loggedInUser.style.display = 'inline';
+                userEmailElement.textContent = userEmail;
+                loginLink.style.display = 'none';
+
+                // Attach logout functionality to the Logout link
+                const logoutLink = document.getElementById('logout-link');
+                if (logoutLink) {
+                    logoutLink.addEventListener('click', function (event) {
+                        event.preventDefault();
+                        // Clear login-related data
+                        localStorage.removeItem('isLoggedIn');
+                        localStorage.removeItem('userEmail');
+                        // Redirect to the welcome page
+                        window.location.href = '/welcome.html';
+                    });
+                }
+            } else {
+                loggedInUser.style.display = 'none';
+                loginLink.style.display = 'inline';
+            }
+        })
+        .catch(error => console.error('Error loading header:', error));
+});
+
+        document.getElementById('login-form').addEventListener('submit', async (event) => {
+            event.preventDefault();
+
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+
+            try {
+                const response = await fetch('/api/login', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ email, password }),
+                });
+
+                const data = await response.json();
+                const messageDiv = document.getElementById('error-message');
+                if (response.ok) {
+                    messageDiv.style.display = 'none'; // Hide the error message
+                    localStorage.setItem('isLoggedIn', 'true');
+                    localStorage.setItem('userEmail', email); // Optional: Save user email for personalization
+                
+                    // Redirect on successful login
+                    setTimeout(() => {
+                        window.location.href = '/gear.html';
+                    }, 3000);
+                } else {
+                    messageDiv.style.display = 'block'; // Show the error message
+                    messageDiv.textContent = data.message || 'Invalid email or password!';
+                    messageDiv.style.color = 'red';
+                }
+                
+            } catch (error) {
+                console.error('Error:', error);
+            }
+        });
+    </script>
+</body>
+</html>

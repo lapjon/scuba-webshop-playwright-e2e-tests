@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deep Dive</title>
+    <link rel="stylesheet" href="/css/base.css">
+    <link rel="stylesheet" href="/css/header.css">
+    <link rel="stylesheet" href="/css/welcome.css">
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="header-placeholder"></div>
+
+    <main>
+        <section class="featured-items">
+            <h2>Welcome to Deep Dive</h2>
+            <a href="gear.html" class="browse-gear-link">Browse Our Gear</a>
+            <div class="items-container" id="items-container">
+                <!-- Static gear items -->
+                <div class="item">
+                    <img src="/images/mask_snorkel.webp" alt="Mask & Snorkel Set">
+                    <h3>Mask & Snorkel Set</h3>
+                    <p>Price: $29.99</p>
+                    <button class="add-to-basket" onclick="addToBasket(1, 'Mask & Snorkel Set', 29.99)">Add to Cart</button>
+                  
+                </div>
+                <div class="item">
+                    <img src="/images/full_body_wetsuit.webp" alt="Full Body Wetsuit">
+                    <h3>Full Body Wetsuit</h3>
+                    <p>Price: $149.99</p>
+                    <button class="add-to-basket" onclick="addToBasket(2, 'Full Body Wetsuit', 149.99)">Add to Cart</button>
+                
+                </div>
+                <div class="item">
+                    <img src="/images/diving_fins.webp" alt="Diving Fins">
+                    <h3>Diving Fins</h3>
+                    <p>Price: $69.99</p>
+                    <button class="add-to-basket" onclick="addToBasket(3, 'Diving Fins', 69.99)">Add to Cart</button>
+               
+                </div>
+                <div class="item">
+                    <img src="/images/dive_computer.webp" alt="Dive Computer">
+                    <h3>Dive Computer</h3>
+                    <p>Price: $295.99</p>
+                    <button class="add-to-basket" onclick="addToBasket(4, 'Dive Computer', 295.99)">Add to Cart</button>
+        
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        Dive Shop
+    </footer>
+
+    <script>
+      // Load the reusable header dynamically
+    document.addEventListener("DOMContentLoaded", function () {
+        fetch('/header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header-placeholder').innerHTML = data;
+
+                // Dynamically update the cart counter
+                const basketCounter = document.getElementById('basket-counter');
+                const loginLink = document.getElementById('login-link');
+                const loggedInUser = document.getElementById('logged-in-user');
+                const userEmailElement = document.getElementById('user-email');
+                const basket = JSON.parse(localStorage.getItem('basket')) || [];
+                const userEmail = localStorage.getItem('userEmail');
+                const isLoggedIn = localStorage.getItem('isLoggedIn') === 'true';
+
+                // Debugging: Log the state for testing
+                console.log('Basket:', basket);
+                console.log('isLoggedIn:', isLoggedIn);
+                console.log('userEmail:', userEmail);
+
+                if (basketCounter) {
+                    basketCounter.textContent = basket.length;
+                }
+
+                if (isLoggedIn && userEmail) {
+                    loggedInUser.style.display = 'inline';
+                    userEmailElement.textContent = userEmail;
+                    loginLink.style.display = 'none';
+
+                    // Attach logout functionality to the Logout link
+                    const logoutLink = document.getElementById('logout-link');
+                    if (logoutLink) {
+                        logoutLink.addEventListener('click', function (event) {
+                            event.preventDefault();
+                            // Clear login-related data
+                            localStorage.removeItem('isLoggedIn');
+                            localStorage.removeItem('userEmail');
+                            // Redirect to the welcome page
+                            window.location.href = '/welcome.html';
+                        });
+                    }
+                } else {
+                    loggedInUser.style.display = 'none';
+                    loginLink.style.display = 'inline';
+                }
+            })
+            .catch(error => console.error('Error loading header:', error));
+    });
+
+        function updateBasketCounter() {
+            const basket = JSON.parse(localStorage.getItem('basket')) || [];
+            const basketCounter = document.getElementById('basket-counter');
+            if (basketCounter) {
+                basketCounter.textContent = basket.length;
+            }
+        }
+
+        // Add item to basket function
+        function addToBasket(id, name, price) {
+            const basket = JSON.parse(localStorage.getItem('basket')) || [];
+            basket.push({ id, name, price });
+            localStorage.setItem('basket', JSON.stringify(basket));
+            alert(`${name} has been added to your cart!`);
+            updateBasketCounter(); // Update the counter after adding an item
+        }
+    </script>
+</body>
+</html>

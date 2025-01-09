@@ -1,0 +1,145 @@
+/* General font styling */
+body {
+    font-family: 'Comfortaa', sans-serif; /* Set Comfortaa as the default font */
+    color: #333; /* Standard text color */
+    line-height: 1.6; /* Improve readability */
+  }
+  
+  /* Headings (h1, h2, h3) */
+  h1, h2, h3 {
+    font-weight: 700; /* Bold for headings */
+    color: #274fde; /* Matches your color scheme */
+    line-height: 1.4; /* Adjust heading line spacing */
+  }
+  
+  /* Paragraphs and general text */
+  p {
+    font-weight: 400; /* Regular weight for text */
+    color: #333; /* Subtle gray for text */
+  }
+  
+  /* Buttons */
+  button, .add-to-basket, .browse-gear-link {
+    font-family: 'Comfortaa', sans-serif;
+    font-weight: 400; /* Regular weight for buttons */
+  }
+
+/* Checkout page */
+.checkout-section {
+    padding: 120px 20px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+input, select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+input:focus, select:focus {
+    border-color: #005f73;
+    outline: none;
+}
+
+button {
+    align-self: flex-end;
+}
+
+#basket-summary {
+    margin-bottom: 20px;
+    background: #f4f4f4;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.basket-summary-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.basket-summary-table th,
+.basket-summary-table td {
+    padding: 8px;
+    text-align: left;
+}
+
+.basket-summary-table th {
+    background-color: #274fde;
+    color: white;
+}
+
+.basket-summary-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+/* error handling */
+input.invalid:focus {
+    border-color: #ff7f7f; /* Softer red for focus */
+    outline: none;
+    box-shadow: 0 0 5px rgba(255, 127, 127, 0.5); /* Subtle red glow */
+}
+  
+  .error-message {
+    color: red;
+    font-size: 0.9rem;
+    margin-top: 5px; /* Add spacing below the input */
+    display: none;
+  }
+
+  .checkout-section {
+    text-align: left;
+    background: white; /* Box background color */
+    padding: 30px;
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow effect */
+    max-width: 700px;
+    margin: 50px auto; /* Center the box */
+}
+
+.checkout-section h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #07248b; /* Match the color scheme */
+}
+
+.checkout-section form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.checkout-section label {
+    font-size: 1.1rem;
+    color: #333;
+}
+
+.checkout-section input,
+.checkout-section select {
+    padding: 12px;
+    font-size: 1.1rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+.checkout-section button {
+    padding: 12px 20px;
+    font-size: 1.1rem;
+    background-color: #07248b;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.checkout-section button:hover {
+    background-color: #3357c2; /* Lighter hover effect */
+}
+

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Deep Dive</title>
+    <link rel="stylesheet" href="/css/base.css">
+    <link rel="stylesheet" href="/css/header.css">
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="header-placeholder"></div>
+    <main>
+        <section class="about-section">
+            <h2>About Deep Dive</h2>
+            <p>
+                Deep Dive is my project built to showcase the development and front-end testing of a functional webshop for scuba gear. 
+                It highlights the use of static pages, dynamic front-end interactivity, and streamlined user experience 
+                through navigation and functional forms and how these can be tested using automated testing frameworks like Cypress, Playwright, Selenium, etc.
+            </p>
+            <img src="/images/sea-turtle.jpg" alt="Turtle" class="about-image">
+        </section>
+    </main>
+    <footer>
+        Dive Shop
+    </footer>
+    <script>
+     // Load the reusable header dynamically
+     document.addEventListener("DOMContentLoaded", function () {
+        fetch('/header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header-placeholder').innerHTML = data;
+
+                // Dynamically update the cart counter
+                const basketCounter = document.getElementById('basket-counter');
+                const loginLink = document.getElementById('login-link');
+                const loggedInUser = document.getElementById('logged-in-user');
+                const userEmailElement = document.getElementById('user-email');
+                const basket = JSON.parse(localStorage.getItem('basket')) || [];
+                const userEmail = localStorage.getItem('userEmail');
+                const isLoggedIn = localStorage.getItem('isLoggedIn') === 'true';
+
+                // Debugging: Log the state for testing
+                console.log('Basket:', basket);
+                console.log('isLoggedIn:', isLoggedIn);
+                console.log('userEmail:', userEmail);
+
+                if (basketCounter) {
+                    basketCounter.textContent = basket.length;
+                }
+
+                if (isLoggedIn && userEmail) {
+                    loggedInUser.style.display = 'inline';
+                    userEmailElement.textContent = userEmail;
+                    loginLink.style.display = 'none';
+
+                    // Attach logout functionality to the Logout link
+                    const logoutLink = document.getElementById('logout-link');
+                    if (logoutLink) {
+                        logoutLink.addEventListener('click', function (event) {
+                            event.preventDefault();
+                            // Clear login-related data
+                            localStorage.removeItem('isLoggedIn');
+                            localStorage.removeItem('userEmail');
+                            // Redirect to the welcome page
+                            window.location.href = '/welcome.html';
+                        });
+                    }
+                } else {
+                    loggedInUser.style.display = 'none';
+                    loginLink.style.display = 'inline';
+                }
+            })
+            .catch(error => console.error('Error loading header:', error));
+    });
+    </script>
+</body>
+</html>

@@ -1,0 +1,264 @@
+/* General font styling */
+body {
+    font-family: 'Comfortaa', sans-serif; /* Set Comfortaa as the default font */
+    color: #333; /* Standard text color */
+    line-height: 1.6; /* Improve readability */
+  }
+  
+  /* Headings (h1, h2, h3) */
+  h1, h2, h3 {
+    font-weight: 700; /* Bold for headings */
+    color: #07248b; /* Matches your color scheme */
+    line-height: 1.4; /* Adjust heading line spacing */
+  }
+  
+  /* Paragraphs and general text */
+  p {
+    font-weight: 400; /* Regular weight for text */
+    color: #666; /* Subtle gray for text */
+  }
+  
+  /* Buttons */
+  button, .add-to-basket, .browse-gear-link {
+    font-family: 'Comfortaa', sans-serif;
+    font-weight: 400; /* Regular weight for buttons */
+  }
+
+  /* General Page Background */
+body {
+    background-color: #f7f7f7; /* Light gray background for better contrast */
+    color: #333; /* Standard text color */
+    font-family: 'Comfortaa', sans-serif;
+    line-height: 1.6;
+  }
+  
+  /* Header */
+  header {
+    background-color: #07248b; /* Primary blue */
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+  }
+  
+  header a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  header a:hover {
+    color: #f58b45; /* Accent orange for hover */
+  }
+  
+  /* Headings */
+  h1, h2, h3 {
+    color: #07248b; /* Primary blue for consistency */
+  }
+  
+  /* Buttons */
+  button, .add-to-basket, .browse-gear-link {
+    background-color: #07248b; /* Primary blue */
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  button:hover, .add-to-basket:hover, .browse-gear-link:hover {
+    background-color: #f58b45; /* Accent orange for hover effect */
+    transform: scale(1.05); /* Subtle zoom effect */
+  }
+  
+  /* Gear Item Containers */
+  .item {
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border: 1px solid #ddd;
+    transition: box-shadow 0.3s ease, transform 0.2s ease;
+  }
+  
+  .item:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Slightly stronger shadow on hover */
+    transform: translateY(-5px); /* Lift effect */
+  }
+  
+  /* Prices */
+.item p {
+    color: #f34223 !important; /* Force the orange color for prices */
+    font-weight: bold; /* Make prices stand out */
+    margin: 5px 0; /* Ensure proper spacing */
+  }
+  
+  /* Footer */
+  footer {
+    background-color: #07248b; /* Primary blue */
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+  }
+  
+  footer a {
+    color: #f58b45; /* Accent orange */
+    text-decoration: none;
+  }
+  
+  footer a:hover {
+    color: white; /* Invert hover color */
+  }
+  
+
+/* Welcome page */
+.featured-items {
+    padding: 120px 20px;
+    text-align: center;
+}
+
+.featured-items h2 {
+    margin-bottom: 20px;
+}
+
+.items-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.item {
+    background: white;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.item img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+}
+
+.browse-gear-link {
+    display: inline-block;
+    margin: 20px 0;
+    padding: 10px 20px;
+    background-color: #07248b;
+    color: white;
+    border-radius: 4px;
+}
+
+.browse-gear-link:hover {
+    background-color: #4c65cb;
+}
+
+.gear-item {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+    max-width: 200px;
+  }
+  
+  .gear-item img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+  
+  .gear-item h3 {
+    font-size: 1.2em;
+    margin: 10px 0;
+  }
+  
+  .gear-item p {
+    color: #07248b; /* Matches your color scheme */
+    font-weight: bold;
+  }
+  
+  .gear-item button {
+    background-color: #07248b;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .gear-item button:hover {
+    background-color: #1d3fb8;
+  }
+
+  .featured-items {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .featured-items h2 {
+    font-size: 2em;
+    margin-bottom: 10px;
+    color: #07248b;
+  }
+  
+  .browse-gear-link {
+    display: inline-block;
+    margin: 20px 0;
+    padding: 10px 20px;
+    background-color: #07248b;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+  }
+  
+  .browse-gear-link:hover {
+    background-color: #1d3fb8;
+  }
+  
+  .items-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 20px;
+  }
+  
+  .item {
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 15px;
+    max-width: 250px;
+    text-align: center;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin: 5px;
+  }
+  
+  .item img {
+    max-width: 100%;
+    border-radius: 10px;
+  }
+  
+  .item h3 {
+    margin: 10px 0;
+    font-size: 1.2em;
+  }
+  
+  .item p {
+    color: #666;
+  }
+  
+  .add-to-basket {
+    margin-top: 10px;
+    padding: 10px 15px;
+    background-color: #07248b;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .add-to-basket:hover {
+    background-color: #f58b45;
+  }

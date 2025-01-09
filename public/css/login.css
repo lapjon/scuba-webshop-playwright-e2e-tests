@@ -1,0 +1,103 @@
+/* General font styling */
+body {
+    font-family: 'Comfortaa', sans-serif; /* Set Comfortaa as the default font */
+    color: #333; /* Standard text color */
+    line-height: 1.6; /* Improve readability */
+  }
+  
+  /* Headings (h1, h2, h3) */
+  h1, h2, h3 {
+    font-weight: 700; /* Bold for headings */
+    color: #07248b; /* Matches your color scheme */
+    line-height: 1.4; /* Adjust heading line spacing */
+  }
+  
+  /* Paragraphs and general text */
+  p {
+    font-weight: 400; /* Regular weight for text */
+    color: #666; /* Subtle gray for text */
+  }
+  
+  /* Buttons */
+  button, .add-to-basket, .browse-gear-link {
+    font-family: 'Comfortaa', sans-serif;
+    font-weight: 400; /* Regular weight for buttons */
+  }
+
+
+/* Center-align the login page content */
+main {
+    display: flex;
+    justify-content: center; /* Horizontally center the content */
+    align-items: center; /* Vertically center the content */
+    min-height: 100vh; /* Full viewport height */
+    background-color: #f4f4f4; /* Optional background color */
+}
+
+.login-section {
+    text-align: center; /* Center-align all text inside this section */
+    background: white;
+    padding: 30px; /* Add padding around the section */
+    border-radius: 10px; /* Slightly rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Enhance shadow */
+    width: 100%;
+    max-width: 500px; /* Restrict maximum width for the section */
+}
+
+.login-section h2 {
+    font-size: 2rem; /* Make the heading larger */
+    margin-bottom: 20px; /* Add space below the heading */
+    color: #07248b; /* Match the color scheme */
+}
+
+.login-section form {
+    display: flex;
+    flex-direction: column; /* Stack form elements vertically */
+    gap: 20px; /* Add spacing between form elements */
+}
+
+.login-section label {
+    font-size: 1.1rem; /* Increase label size */
+}
+
+.login-section input {
+    padding: 12px; /* Add padding inside the input fields */
+    font-size: 1.1rem; /* Larger font size for inputs */
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+.login-section button {
+    padding: 12px 20px; /* Larger button with more padding */
+    font-size: 1.1rem; /* Bigger button text */
+    background-color: #07248b;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.login-section button:hover {
+    background-color: #3357c2; /* Ligther hover effect */
+}
+
+.login-section p {
+    margin-top: 20px; /* Space above the "Not a member?" text */
+    font-size: 1rem; /* Font size for the paragraph */
+}
+
+.login-section a {
+    color: #07248b; /* Match link color with theme */
+}
+
+.login-section a:hover {
+    text-decoration: underline;
+}
+
+body.login-page {
+    background-image: url('/images/background3.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+}

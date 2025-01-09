@@ -1,0 +1,123 @@
+/* General font styling */
+body {
+    font-family: 'Comfortaa', sans-serif; /* Set Comfortaa as the default font */
+    color: #333; /* Standard text color */
+    line-height: 1.6; /* Improve readability */
+  }
+  
+  /* Headings (h1, h2, h3) */
+  h1, h2, h3 {
+    font-weight: 700; /* Bold for headings */
+    color: #07248b; /* Matches your color scheme */
+    line-height: 1.4; /* Adjust heading line spacing */
+  }
+  
+  /* Paragraphs and general text */
+  p {
+    font-weight: 400; /* Regular weight for text */
+    color: #666; /* Subtle gray for text */
+  }
+  
+  /* Buttons */
+  button, .add-to-basket, .browse-gear-link {
+    font-family: 'Comfortaa', sans-serif;
+    font-weight: 400; /* Regular weight for buttons */
+  }
+
+/* Basket section styles */
+.basket-section {
+    max-width: 800px; /* Limit the width for better readability */
+    margin: 0 auto; /* Center the section horizontally */
+    padding: 20px;
+    background-color: #ffffff; /* Optional background color */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add subtle shadow */
+}
+
+.basket-section h2 {
+    font-size: 2rem;
+    text-align: center; /* Center-align the heading */
+    color: #07248b; /* Match the theme color */
+    margin-bottom: 20px; /* Space below the heading */
+}
+
+/* Basket items container */
+#basket-items {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    gap: 15px; /* Add spacing between items */
+}
+
+.basket-item {
+    display: flex;
+    justify-content: space-between; /* Space out item name, price, and button */
+    align-items: center; /* Center items vertically */
+    padding: 10px 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for items */
+}
+
+/* Item text */
+.basket-item .item-name {
+    flex: 1;
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+.basket-item .item-price {
+    margin-right: 20px;
+    font-size: 1rem;
+    color: #333;
+}
+
+/* Remove button */
+.basket-item .remove-item {
+    padding: 8px 15px;
+    background-color: #a93737;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.basket-item .remove-item:hover {
+    background-color: #581e1e; /* Darker red on hover */
+}
+
+/* Basket summary */
+.basket-summary {
+    text-align: right; /* Align summary to the right */
+    margin-top: 20px; /* Space above the summary */
+}
+
+.basket-summary p {
+    margin: 5px 0;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.basket-summary .checkout-button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 10px;
+    background-color: #07248b;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-weight: 600;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+.basket-summary .checkout-button:hover {
+    background-color: #a85914;
+}
+
+.basket-section {
+    margin-top: 40px; /* Optional: Add a little extra spacing for clarity */
+}
