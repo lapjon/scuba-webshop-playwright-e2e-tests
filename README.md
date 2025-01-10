@@ -69,75 +69,75 @@ The project includes a pre-configured CI workflow to:
 **Key Test Scenarios:**
 
 **signup.test.js**    
-TC1: Verify successful sign up with valid credentials
-TC2: Verify error should display for invalid email format
-TC3: Verify error should display for invalid password: No uppercase letters
-TC4: Verify error should display for invalid password: No numbers                  
-TC5: Verify error should display for invalid password: No letters
-TC6: Verify error should display for invalid password: Less than 8 characters            
-TC7: Verify error should display for mismatched passwords
-TC8: Verify multiple submissions should be prevented
-TC9: Verify error error message should display for email already in use
-TC10: Verify error error message when only password field is filled
-TC11: Verify error error message when only confirm password field is filled
-TC12: Verify error error message should display for email exceeding 254 characters
-TC13: Verify the password in password field is not visible while typing
-TC14: Verify the password in confirm password field is not visible while typing
+- TC1: Verify successful sign up with valid credentials
+- TC2: Verify error should display for invalid email format
+- TC3: Verify error should display for invalid password: No uppercase letters
+- TC4: Verify error should display for invalid password: No numbers                  
+- TC5: Verify error should display for invalid password: No letters
+- TC6: Verify error should display for invalid password: Less than 8 characters            
+- TC7: Verify error should display for mismatched passwords
+- TC8: Verify multiple submissions should be prevented
+- TC9: Verify error error message should display for email already in use
+- TC10: Verify error error message when only password field is filled
+- TC11: Verify error error message when only confirm password field is filled
+- TC12: Verify error error message should display for email exceeding 254 characters
+- TC13: Verify the password in password field is not visible while typing
+- TC14: Verify the password in confirm password field is not visible while typing
 
 **login.test.js**
-TC1: Verify successful login with valid credentials     
-TC2: Verify login should fail with invalid credentials           
-TC3: Verify user can log out successfully
-TC4: Verify user cannot log in with non-existing user
-TC5: Verify error message for empty password field
-TC6: Verify error message for empty email field
-TC7: Verify error message for invalid email format
+- TC1: Verify successful login with valid credentials     
+- TC2: Verify login should fail with invalid credentials           
+- TC3: Verify user can log out successfully
+- TC4: Verify user cannot log in with non-existing user
+- TC5: Verify error message for empty password field
+- TC6: Verify error message for empty email field
+- TC7: Verify error message for invalid email format
 
 **items.test.js**
-TC1: Add items from Welcome page as unsigned user
-TC2: Add items from Gear page as unsigned user
-TC3: Add and remove items from Gear page as unsigned user
-TC4: Add multiple items from Welcome page and Gear page as unsigned user
-TC5: Verify item count on Gear page
-TC6: Verify item count on Welcome page
-TC7: Add multiples of the same item to cart and verify quantity and total amount
-TC8: Add multiple items to cart and verify cart counter and total amount 
-TC9: Remove items from cart and verify cart counter and total amount
-TC10: Empty cart and verify cart counter and total amount  
-TC11: Verify Cart persistence after page reload   
+- TC1: Add items from Welcome page as unsigned user
+- TC2: Add items from Gear page as unsigned user
+- TC3: Add and remove items from Gear page as unsigned user
+- TC4: Add multiple items from Welcome page and Gear page as unsigned user
+- TC5: Verify item count on Gear page
+- TC6: Verify item count on Welcome page
+- TC7: Add multiples of the same item to cart and verify quantity and total amount
+- TC8: Add multiple items to cart and verify cart counter and total amount 
+- TC9: Remove items from cart and verify cart counter and total amount
+- TC10: Empty cart and verify cart counter and total amount  
+- TC11: Verify Cart persistence after page reload   
 
 **navigation.test.js**
-TC1: Verify page links as unsigned user
-TC2: Verify navigation to Gear page when clicking link
-TC3: Verify navigation to About page when clicking link
-TC4: Verify navigation to Login page when clicking link
-TC5: Verify navigation to Cart page when clicking link
-TC6: Verify redirect link from Login page to Signup page for unsigned user
-TC7: Verify Checkout page CTA redirects to Login page as un-signed user
+- TC1: Verify page links as unsigned user
+- TC2: Verify navigation to Gear page when clicking link
+- TC3: Verify navigation to About page when clicking link
+- TC4: Verify navigation to Login page when clicking link
+- TC5: Verify navigation to Cart page when clicking link
+- TC6: Verify redirect link from Login page to Signup page for unsigned user
+- TC7: Verify Checkout page CTA redirects to Login page as un-signed user
 
 **checkout.test.js**    
-TC1: Error message should display for missing email
-TC2: Error message should display for invalid email format
-TC3: Error message should display for numbers in first name field
-TC4: Error message should display for missing first name 
-TC5: Error message should display for numbers in last name field
-TC6: Error message should display for missing last name 
-TC7: Error message should display for too short address
-TC8: Error message should display for missing address
-TC10: Error message should display for missing city
-TC11: Error message should display for too short postcode
-TC12: Error message should display for too long postcode
-TC13: Error message should display for numbers in card holder name field
-TC14: Error message should display for invalid card number
-TC15: Error message should display for past expiry date
-TC16: Error message should display for invalid cvv number
+- TC1: Error message should display for missing email
+- TC2: Error message should display for invalid email format
+- TC3: Error message should display for numbers in first name field
+- TC4: Error message should display for missing first name 
+- TC5: Error message should display for numbers in last name field
+- TC6: Error message should display for missing last name 
+- TC7: Error message should display for too short address
+- TC8: Error message should display for missing address
+- TC10: Error message should display for missing city
+- TC11: Error message should display for too short postcode
+- TC12: Error message should display for too long postcode
+- TC13: Error message should display for numbers in card holder name field
+- TC14: Error message should display for invalid card number
+- TC15: Error message should display for past expiry date
+- TC16: Error message should display for invalid cvv number
 
 **purchase.test.js**     
-TC1: Verify successful purchase flow for signed-in user           
-TC2: Verify cart summary on Checkout page  
+- TC1: Verify successful purchase flow for signed-in user           
+- TC2: Verify cart summary on Checkout page  
 
 **end2end.flow.cy.js**    
-E2E Happy Flow: browse gear, add items, register, login, checkout and complete order
+- E2E Happy Flow: browse gear, add items, register, login, checkout and complete order
 
 
 
