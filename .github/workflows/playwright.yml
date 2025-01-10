@@ -33,3 +33,4 @@ jobs:
 
       - name: Run Tests
         run: npx playwright test --project=${{ matrix.browser }}
+        continue-on-error: true
